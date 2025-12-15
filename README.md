@@ -6,13 +6,12 @@ allowing users to generate **complete light novels** with **custom genres and th
 
 ## Features
 
-AI-powered **character generation** with detailed backgrounds and relationships  
+AI-powered **character generation** with detailed backgrounds and
+relationships  
 Structured **plot outlines** based on user input (**genre, themes, title**)  
 **Full chapter expansion** with rich descriptions and dialogues  
 **Local LLM inference using Ollama** (`mistral:7b`, `aya-expanse:32b`)  
 **Exports generated novels** as `.txt` files  
-
----
 
 ## Installation
 
@@ -48,15 +47,15 @@ cd Light-Novel-Generator
 
 ## Usage
 
-### Run the `main.py` file
+Run the `main.py` file
+
+### Example User Input
 
 ```
-
-Example User Input:
 Enter book title: The Lost Realm
 Enter book genre: Fantasy
 Enter themes (comma-separated): Adventure, Magic, Betrayal
 Enter number of chapters: 10
 ```
 
-### The AI will generate a unique novel based on your input and save it as `output/generated_novel.txt`
+The AI will generate a unique novel based on your input and save it as `output/generated_novel.txt`
