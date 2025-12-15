@@ -60,7 +60,7 @@ class BookGenerator:
             print(f"⚠️ Error parsing Ollama response: {e}")
             return ""
 
-    def initialize_book(self, user_input: Dict) -> Dict:
+    def initialize_book(self, user_input: Dict) -> Book:
         return Book(
             title=user_input.get("title", "Untitled Novel"),
             genre=user_input["genre"],
@@ -137,7 +137,13 @@ class BookGenerator:
     def generate_chapter(self, chapter_number: int, chapter_summary: str) -> Chapter:
         if not chapter_summary:
             print(f"⚠️ Skipping Chapter {chapter_number}: No summary available.")
-            return None
+            return Chapter(
+                number=0,
+                title="",
+                summary="",
+                scenes=[Scene(content="")],
+                word_count=0,
+            )
 
         prompt = f"""
         Expand the following chapter summary into a detailed chapter with rich descriptions, dialogues, and scene transitions.
